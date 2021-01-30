@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>about</title>
+        <meta name="description" content="Learn more about Rohan Bhushan, and his interests and hobbies">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ROHAN BHUSHAN</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="projects.html">personal projects</a></li>
+                    <li><a href="experience.html">experience</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+            <h1 class="page-title">about</h1>
+        </header>
+
+        <table id="about-me-table">
+            <caption>General information about me, annd some of my hobbies</caption>
+            <colgroup>
+                <col span="2" style="background-color:rgb(255, 255, 255)">
+            </colgroup>
+            <tr>
+                <th><b>about me</b></th>
+                <th><b>interests and hobbies</b></th>
+            </tr>
+            <tr>
+                <td>lots to know about me!</td>
+                <td>
+                    <ul>
+                        <li><b>Football: </b> I'm a huge Ravens fan, and can be found watching football most days. I also love
+                            playing fantasy football, and one of my side projects to do with that can be found on my <a href="projects.html">personal projects page</a>.
+                        </li>
+                        <li>
+                            <b>Photography: </b>
+                            I love taking photographs, and have started using a Canon AE-1 to take film photography.
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <br />
+        
+
+        <p>I like interesting art and sounds!</p>
+        <canvas id="canvas-design">
+            Your browser does not support the canvas tag
+        </canvas>
+ 
+        <audio controls>
+            <source src="assets/invalid_keypress.mp3" type="audio/mp3">
+             Your browser does not support the audio tag
+        </audio>
+        
+        <template>
+            <h1>This doesn't do anything!</h1>
+        </template>
+        
+
+        <script>
+            var canvas = document.getElementById("canvas-design");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle= "#8eb6ff";
+            ctx.fillRect(0,0,400,200);
+        </script>
+
+        <footer>
+            <hr/>
+            <p>Made by Rohan Bhushan</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/rohan-bhushan-a955b3194/">LinkedIn</a></li>
+                <li><a href="https://github.com/rbhushans">GitHub</a></li>
+            </ul>
+        </footer>
+    
+    </body>
+</html>
