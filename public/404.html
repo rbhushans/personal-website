@@ -1,24 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <title>Page Not Found</title>
+    <meta name="description" content="404 Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5b8194">
+    <link rel="preload" as="manifest" href="/site.webmanifest">
+    <link rel="preload" as="style" href="styles/home.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles/home.css" type="text/css">
   </head>
   <body>
     <header>
-      <nav>
-          <ul>
-              <li><a href="index.html">ROHAN BHUSHAN</a></li>
-              <li><a href="about.html">about</a></li>
-              <li><a href="projects.html">personal projects</a></li>
-              <li><a href="experience.html">experience</a></li>
-              <li><a href="contact.html">contact</a></li>
-          </ul>
-      </nav>
+        <a href="index.html">
+            <img id="header-logo" src="android-chrome-192x192.png" height="100" width="100" alt="header-logo">
+        </a>
+        <nav>
+            <ul id="header-ul">
+                <li class="header-li"><a href="about.html">about</a></li>
+                <li class="header-li"><a href="projects.html">personal projects</a></li>
+                <li class="header-li"><a href="experience.html">experience</a></li>
+            </ul>
+        </nav>
+        <div id="menuToggle">
+            <label id="menu-icon" for="fake-checkbox">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="assets/menu_icon.png">
+                    <img id="menu-pic" src="assets/menu_icon_min.png" height="70" width="70" alt="Menu Icon">
+                </picture>
+            </label>
+            <input id="fake-checkbox" type="checkbox"/>
+            <ul id="menu">
+                <li class="drop-li"><a href="about.html">about</a></li>
+                <li class="drop-li"><a href="projects.html">personal projects</a></li>
+                <li class="drop-li"><a href="experience.html">experience</a></li>
+                <li class="drop-li"><a href="blogs.html">blogs</a></li>
+            </ul>
+        </div>
+    </header>
+    <h1 class="title">This page was not found!</h1>
+    <p id="err-404">Use one of the links above to access a valid page</p>
+    <footer>
+      <hr/>
+      <div class="footer-center">
+        <ul class="footer-link-list">
+            <li class="footer-link">
+                <a href="https://www.linkedin.com/in/rohan-bhushan-a955b3194/" target="_blank">
+                    <picture>
+                        <source media="(min-width: 900px)" srcset="assets/linkedin-logo-copy.png">
+                        <img src="assets/linkedin-logo-min.png" height="40" width="40" alt="LinkedIn Logo">
+                    </picture>
+                </a>
+            </li>
+            <li class="footer-link">
+                <a href="https://github.com/rbhushans" target="_blank">
+                    <picture>
+                        <source media="(min-width: 900px)" srcset="assets/25231.png">
+                        <img src="assets/25231-min.png" height="40" width="40" alt="GitHub Logo">
+                    </picture>
+                </a>
+            </li>
+            <li class="footer-link">
+                <a href="mailto:rsbhusha@ucsd.edu" target="_blank">
+                    <picture>
+                        <source media="(min-width: 900px)" srcset="assets/Email-Icon.png">
+                        <img src="assets/Email-Icon-Min.png" height="50" width="50" alt="Email Icon">
+                    </picture>
+                </a>
+            </li>
+        </ul>
+    </div>
       
-  </header>
-    <h1>This page was not found!</h1>
-    <p>Use one the links above to access a valid page</p>
+      <div class="footer-center" id="footer-links">
+          <ul class="footer-link-list">
+              <li class="footer-link"><a href="index.html">home</a></li>
+              <li class="footer-link"><a href="about.html">about</a></li>
+              <li class="footer-link"><a href="projects.html">personal projects</a></li>
+              <li class="footer-link"><a href="experience.html">experience</a></li>
+          </ul> 
+      </div>
+
+      <div class="footer-center">
+          <p id="footer-tag">Rohan Bhushan &copy; 2021</p>
+      </div>
+  </footer>
   </body>
 </html>

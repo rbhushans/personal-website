@@ -5,88 +5,139 @@
         <title>about</title>
         <meta name="description" content="Learn more about Rohan Bhushan, and his interests and hobbies">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#5b8194">
+        <link rel="preload" as="manifest" href="/site.webmanifest">
+        <link rel="preload" as="style" href="styles/home.css">
+        <link rel="preload" href="scripts/particles.js" as="script">
+        <link rel="preload" href="scripts/app.js" as="script">
+        <link rel="preload" href="scripts/gallery.js" as="script">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        <style>
-            table, th, td {
-              border: 1px solid black;
-            }
-        </style>
+        <link rel="stylesheet" href="styles/home.css" type="text/css">
+        <script src="scripts/particles.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/gallery.js"></script>
     </head>
     <body>
         <header>
+            <a href="index.html">
+                <img id="header-logo" src="android-chrome-192x192.png" height="100" width="100" alt="header-logo">
+            </a>
             <nav>
-                <ul>
-                    <li><a href="index.html">ROHAN BHUSHAN</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="projects.html">personal projects</a></li>
-                    <li><a href="experience.html">experience</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                <ul id="header-ul">
+                    <li class="header-li header-select"><a href="about.html">about</a></li>
+                    <li class="header-li"><a href="projects.html">personal projects</a></li>
+                    <li class="header-li"><a href="experience.html">experience</a></li>
                 </ul>
             </nav>
-            <h1 class="page-title">about</h1>
+            <div id="menuToggle">
+                <label id="menu-icon" for="fake-checkbox">
+                    <picture>
+                        <source media="(min-width: 900px)" srcset="assets/menu_icon.png">
+                        <img id="menu-pic" src="assets/menu_icon_min.png" height="70" width="70" alt="Menu Icon">
+                    </picture>
+                </label>
+                <input id="fake-checkbox" type="checkbox"/>
+                <ul id="menu">
+                    <li class="drop-li"><a href="about.html">about</a></li>
+                    <li class="drop-li"><a href="projects.html">personal projects</a></li>
+                    <li class="drop-li"><a href="experience.html">experience</a></li>
+                    <li class="drop-li"><a href="blogs.html">blogs</a></li>
+                </ul>
+            </div>
         </header>
 
-        <table id="about-me-table">
-            <caption>General information about me, annd some of my hobbies</caption>
-            <colgroup>
-                <col span="2" style="background-color:rgb(255, 255, 255)">
-            </colgroup>
-            <tr>
-                <th><b>about me</b></th>
-                <th><b>interests and hobbies</b></th>
-            </tr>
-            <tr>
-                <td>lots to know about me!</td>
-                <td>
-                    <ul>
-                        <li><b>Football: </b> I'm a huge Ravens fan, and can be found watching football most days. I also love
-                            playing fantasy football, and one of my side projects to do with that can be found on my <a href="projects.html">personal projects page</a>.
-                        </li>
-                        <li>
-                            <b>Photography: </b>
-                            I love taking photographs, and have started using a Canon AE-1 to take film photography.
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
+        <div id="particles-js"></div>
 
-        <br />
-        
+        <h1 class="title">about</h1>
 
-        <p>I like interesting art and sounds!</p>
-        <canvas id="canvas-design">
-            Your browser does not support the canvas tag
-        </canvas>
- 
-        <audio controls>
-            <source src="assets/invalid_keypress.mp3" type="audio/mp3">
-             Your browser does not support the audio tag
-        </audio>
-        
-        <template>
-            <h1>This doesn't do anything!</h1>
-        </template>
-        
-
-        <script>
-            var canvas = document.getElementById("canvas-design");
-            var ctx = canvas.getContext("2d");
-            ctx.fillStyle= "#8eb6ff";
-            ctx.fillRect(0,0,400,200);
-        </script>
+        <main id="about-grid">
+            <picture>
+                <source media="(min-width: 900px)" srcset="assets/headshot.JPG">
+                <img class="about-me-pic" id="about-headshot" src="assets/headshot_medium.jpg" alt="Rohan Portrait" height="1136" width="914">
+            </picture>
+            <div class="about-me-text" id="about-first">
+                <h2>about me</h2>
+                <p>I'm currently a third year undergraduate computer science student 
+                    at University of California, San Diego. I have detailed experience in coding
+                    in Java, C, C++, JavaScript, and Python. My expected graduation is 
+                    December 2021. I'm currently working as a Business Systems Analyst with UCSD Health,
+                    working on various applications using Python, AppleScript, and Tableau. I have also accepted
+                    a summer position as a SDE Intern at Amazon.
+                </p>
+            </div>
+            
+            <div class="about-me-text" id="about-second">
+                <h2>interests and hobbies</h2>
+                <ul id="interests-hobbies">
+                    <li>football</li>
+                    <li>I'm a huge Ravens fan, and love to watch football whenever its on. 
+                        Specifically, I love to explore advanced statistics like EPA, CPOE, 
+                        and DVOA.
+                    </li>
+                    <li>chess</li>
+                    <li>Chess has been a consistent interest of mine, and I enjoy exploring different
+                        strategies and openings in my free time.</li>
+                    <li>baking</li>
+                    <li>I'm the vice president and co-founder of the baking club at UCSD.</li>
+                    <li>photography</li>
+                    <li>I've recently started taking film photography using a Canon AE-1.</li>
+                </ul>
+            </div>
+            <div id="about-brownies">
+                <div class="full-img">
+                    <img class="displayed-img" src="assets/hoops.jpg" alt="Displayed Image" height="400" width="500">
+                </div>
+                <div class="thumbnails"></div>
+            </div>
+        </main>
 
         <footer>
             <hr/>
-            <p>Made by Rohan Bhushan</p>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/rohan-bhushan-a955b3194/">LinkedIn</a></li>
-                <li><a href="https://github.com/rbhushans">GitHub</a></li>
-            </ul>
+            <div class="footer-center">
+                <ul class="footer-link-list">
+                    <li class="footer-link">
+                        <a href="https://www.linkedin.com/in/rohan-bhushan-a955b3194/" target="_blank">
+                            <picture>
+                                <source media="(min-width: 900px)" srcset="assets/linkedin-logo-copy.png">
+                                <img src="assets/linkedin-logo-min.png" height="40" width="40" alt="LinkedIn Logo">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="https://github.com/rbhushans" target="_blank">
+                            <picture>
+                                <source media="(min-width: 900px)" srcset="assets/25231.png">
+                                <img src="assets/25231-min.png" height="40" width="40" alt="GitHub Logo">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="mailto:rsbhusha@ucsd.edu" target="_blank">
+                            <picture>
+                                <source media="(min-width: 900px)" srcset="assets/Email-Icon.png">
+                                <img src="assets/Email-Icon-Min.png" height="50" width="50" alt="Email Icon">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-center" id="footer-links">
+                <ul class="footer-link-list">
+                    <li class="footer-link"><a href="index.html">home</a></li>
+                    <li class="footer-link"><a href="about.html">about</a></li>
+                    <li class="footer-link"><a href="projects.html">personal projects</a></li>
+                    <li class="footer-link"><a href="experience.html">experience</a></li>
+                </ul> 
+            </div>
+
+            <div class="footer-center">
+                <p id="footer-tag">Rohan Bhushan &copy; 2021</p>
+            </div>
         </footer>
-    
+        <script src="scripts/scroll.js"></script>
     </body>
 </html>

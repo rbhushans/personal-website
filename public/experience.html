@@ -5,124 +5,356 @@
         <title>experience</title>
         <meta name="description" content="All of the experiences of Rohan Bhushan, including academic and professional.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#5b8194">
+        <link rel="preload" href="styles/home.css" as="style">
+        <link rel="preload" href="scripts/particles.js" as="script">
+        <link rel="preload" href="scripts/app.js" as="script">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+        <link rel="stylesheet" href="styles/home.css" type="text/css">
+        <script src="scripts/particles.js"></script>
+        <script src="scripts/app.js"></script>
     </head>
-    <body>
+    <body id="experience">
         <header>
+            <a href="index.html">
+                <img id="header-logo" src="android-chrome-192x192.png" height="100" width="100" alt="header-logo">
+            </a>
             <nav>
-                <ul>
-                    <li><a href="index.html">ROHAN BHUSHAN</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="projects.html">personal projects</a></li>
-                    <li><a href="experience.html">experience</a></li>
-                    <li><a href="contact.html">contact</a></li>
+                <ul id="header-ul">
+                    <li class="header-li"><a href="about.html">about</a></li>
+                    <li class="header-li"><a href="projects.html">personal projects</a></li>
+                    <li class="header-li header-select"><a href="experience.html">experience</a></li>
                 </ul>
             </nav>
-            <h1 class="page-title">experience</h1>
+            <div id="menuToggle">
+                <label id="menu-icon" for="fake-checkbox">
+                    <picture>
+                        <source media="(min-width: 900px)" srcset="assets/menu_icon.png">
+                        <img id="menu-pic" src="assets/menu_icon_min.png" height="70" width="70" alt="Menu Icon">
+                    </picture>
+                </label>
+                <input id="fake-checkbox" type="checkbox"/>
+                <ul id="menu">
+                    <li class="drop-li"><a href="about.html">about</a></li>
+                    <li class="drop-li"><a href="projects.html">personal projects</a></li>
+                    <li class="drop-li"><a href="experience.html">experience</a></li>
+                    <li class="drop-li"><a href="blogs.html">blogs</a></li>
+                </ul>
+            </div>
         </header>
 
-        <main>
-            <section id="exp-education">
-                <h2 class="exp-title">education</h2>
-                <hr />
-                <img src="assets/1200px-University_of_California,_San_Diego_seal.svg.png" alt="UCSD" height="100" width="100">
-                <h3 class="exp-block-title">University of California, San Diego</h3>
-                <p><b>Expected Graduation:</b> December 2021</p>
-                <p><b>Relevant Coursework:</b></p>
-                <ul>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Computer Organization/Systems Programming</li>
-                    <li>Software Tools and Techniques</li>
-                </ul>
-                
-            </section>
-    
-            <section id="exp-work">
-                <h2 class="exp-title">work experience</h2>
-                <hr />
+        <div id="particles-js"></div>
 
-                <h3 class="exp-block-title">
-                    SDE Intern
-                    <svg width="50" height="30">
-                        <circle cx="20" cy="15" r="10" stroke="green" stroke-width="4" fill="green" />
-                    </svg>
-                </h3> 
-                <p><b>Amazon</b></p>
-                <p>Summer 2021</p>
-                
-                <h3 class="exp-block-title">Business Systems Analyst</h3>
-                <p><i>UCSD Health</i></p>
-                <details class="exp-block-desc">
-                    <summary>Details</summary>
-                    <p>July 2020 - Present</p>
+        <h1 class="title">experience</h1>
+
+        <main id="main-experience">
+            <h2 class="exp-title">education</h2>
+            <hr />
+            <section id="exp-education"> 
+                <img class="exp-subpic" src="assets/ucsd_small.png" alt="UCSD" width="120" height="120">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">University of California, San Diego</h3>
+                    <p><b>Expected Graduation:</b> December 2021</p>
+                    <p><b>Relevant Coursework:</b></p>
                     <ul>
-                        <li>
-                            Developed a Tableau application and corresponding Web Data Connector in JavaScript to
-                            allow for easy analysis of medical student graduation requirements.
-                        </li>
-                        <li>
-                            Created a Python script to facilitate data collection from MedHub Web API, and perform
-                            data analysis using Pandas.
-                        </li>
-                        <li>
-                            Significantly improved data migration efficiency through the personal development of an 
-                            automation script using AppleScript.
-                        </li>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Computer Organization/Systems Programming</li>
+                        <li>Software Tools and Techniques</li>
+                        <li>Operating Systems</li>
+                        <li>Computer Architecture</li>
+                        <li>Computer Vision</li>
+                        <li>Machine Learning</li>
+                        <li>Convex Optimization</li>
+                        <li>Web Development</li>
                     </ul>
-                </details>
-                
-    
-                <h3 class="exp-block-title">Tutor/Head Tutor</h3>
-                <p><i>UCSD Computer Science and Engineering Department</i></p>
-                <details class="exp-block-desc">
-                    <summary>Details</summary>
-                    <p>September 2019 - December 2020</p>
-                    <ul>
-                        <li>
-                            Manage a team of tutors to ensure all students receive the help they need, and act as
-                            a liaison between tutors and professors.
-                        </li>
-                        <li>
-                            Programmed Gradescope autograding scripts for efficient analysis of student submissions.
-                        </li>
-                        <li>
-                            Tutored students 1-1 in concepts of Java, Python, C, ARM assembly, systems programming, and
-                            object-oriented design in CSE 8A, CSE 11, and CSE 30.
-                        </li>
-                    </ul>
-                </details>
-                
-    
-                <h3 class="exp-block-title">Software Engineering Intern</h3>
-                <p><i>Lyftly</i></p>
-                <details class="exp-block-desc">
-                    <summary>Details</summary>
-                    <p>July 2020 - October 2020</p>
-                    <ul>
-                        <li>
-                            Programmed multiple new features and REST API in ReactJS, NodeJS and MongoDB, including 
-                            mental health questionnaires and an inspirational message sharing platform.
-                        </li>
-                        <li>
-                            Utilized Google Colab (Python) to analyze user experience data using Pandas/Matplotlib 
-                            to better aid user mental health, and identify and improve different screens of the application.
-                        </li>
-                    </ul>
-                </details>
+                </div>
+                <img id="ucsd-fallen" src="assets/ucsd-fallen.jpg" alt="UCSD Fallen Star" width="4032" height="2690">
             </section>
+
+            <br />
+
+            <h2 class="exp-title">work experience</h2>
+            <hr />
+            
+            <section class="exp-work">
+                <img class="exp-subpic" src="assets/amazon_logo_1_.png" alt="Amazon Logo" width="320" height="320">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">SDE Intern</h3> 
+                    <p><i>Amazon</i></p>
+                    <p>Incoming SDE Intern for Amazon for the summer of 2021</p>
+                </div>
+                <p class="exp-date">Summer 2021</p>
+            </section>
+                
+            <section class="exp-work show">
+                <img class="exp-subpic" src="assets/ucsd-health.png" alt="UCSD Health Logo" width="400" height="400">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">Business Systems Analyst</h3>
+                    <p><i>UCSD Health</i></p>
+                    <p class="exp-date-mobile">July 2020 - Present</p>  
+                    <details class="exp-block-desc">
+                        <summary>Details</summary>
+                        <ul>
+                            <li>
+                                Developed a Tableau application and corresponding Web Data Connector in JavaScript to
+                                allow for easy analysis of medical student graduation requirements.
+                            </li>
+                            <li>
+                                Created a Python script to facilitate data collection from MedHub Web API, and perform
+                                data analysis using Pandas.
+                            </li>
+                            <li>
+                                Significantly improved data migration efficiency through the personal development of an 
+                                automation script using AppleScript.
+                            </li>
+                        </ul>
+                    </details>
+                    <ul class="exp-skill-list">
+                        <li class="exp-skill">python</li>
+                        <li class="exp-skill">tableau</li>
+                        <li class="exp-skill">applescript</li>
+                    </ul>
+                </div>
+                <p class="exp-date">July 2020 - Present</p>                
+            </section>
+
+           
+    
+            <section class="exp-work show">
+                <img class="exp-subpic" src="assets/ucsd-cse.gif" alt="UCSD CSE Logo" width="766" height="865">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">Tutor/Head Tutor</h3>
+                    <p><i>UCSD Computer Science and Engineering Department</i></p>
+                    <p class="exp-date-mobile">September 2019 - December 2020</p>
+                    <details class="exp-block-desc">
+                        <summary>Details</summary>
+                        <ul>
+                            <li>
+                                Manage a team of tutors to ensure all students receive the help they need, and act as
+                                a liaison between tutors and professors.
+                            </li>
+                            <li>
+                                Programmed Gradescope autograding scripts for efficient analysis of student submissions.
+                            </li>
+                            <li>
+                                Tutored students 1-1 in concepts of Java, Python, C, ARM assembly, systems programming, and
+                                object-oriented design in CSE 8A, CSE 11, and CSE 30.
+                            </li>
+                        </ul>
+                    </details>
+                    <ul class="exp-skill-list">
+                        <li class="exp-skill">java</li>
+                        <li class="exp-skill">python</li>
+                        <li class="exp-skill">c</li>
+                        <li class="exp-skill">arm</li>
+                    </ul>
+                </div>
+                <p class="exp-date">September 2019 - December 2020</p>
+            </section>
+                
+            <section class="exp-work show">
+                <img class="exp-subpic" src="assets/lyftly.jpeg" alt="Lyftly Logo" width="200" height="200">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">Software Engineering Intern</h3>
+                    <p><i>Lyftly</i></p>
+                    <p class="exp-date-mobile">July 2020 - October 2020</p>  
+                    <details class="exp-block-desc">
+                        <summary>Details</summary>
+                        <ul>
+                            <li>
+                                Programmed multiple new features and REST API in ReactJS, NodeJS and MongoDB, including 
+                                mental health questionnaires and an inspirational message sharing platform.
+                            </li>
+                            <li>
+                                Utilized Google Colab (Python) to analyze user experience data using Pandas/Matplotlib 
+                                to better aid user mental health, and identify and improve different screens of the application.
+                            </li>
+                        </ul>
+                    </details>
+                    <ul class="exp-skill-list">
+                        <li class="exp-skill">reactJS</li>
+                        <li class="exp-skill">nodeJS</li>
+                        <li class="exp-skill">javascript</li>
+                        <li class="exp-skill">python</li>
+                    </ul>
+                </div>
+                <p class="exp-date">July 2020 - October 2020</p>     
+            </section>
+
+            <section class="exp-work show">
+                <img class="exp-subpic" src="assets/ucsd-health.png" alt="UCSD Health Logo" width="400" height="400">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">Data Analysis Assistant</h3>
+                    <p><i>UCSD Health Research</i></p>
+                    <p class="exp-date-mobile">July 2020 - September 2020</p>  
+                    <details class="exp-block-desc">
+                        <summary>Details</summary>
+                        <ul>
+                            <li>
+                                Developed a JavaScript based program using Google Maps API to scrape and analyze over
+                                15,000 geolocation data points for a research project.
+                            </li>
+                        </ul>
+                    </details>
+                    <ul class="exp-skill-list">
+                        <li class="exp-skill">javascript</li>
+                        <li class="exp-skill">Google Maps API</li>
+                    </ul>
+                </div>
+                <p class="exp-date">July 2020 - September 2020</p>     
+            </section>
+
+            <section class="exp-work show">
+                <img class="exp-subpic" src="assets/cig.jpg" alt="CIG Logo" width="449" height="450">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">Technology Associate</h3>
+                    <p><i>Capital Insurance Group</i></p>
+                    <p class="exp-date-mobile">July 2019 - September 2019</p>  
+                    <details class="exp-block-desc">
+                        <summary>Details</summary>
+                        <ul>
+                            <li>
+                                Improved departmental efficiency through the automation of repetitive tasks using
+                                Selenium Webdriver, Python, and Powershell scripting.
+                            </li>
+                            <li>
+                                Troubleshooted and resolved hardware, software, and application issues. 
+                            </li>
+                        </ul>
+                    </details>
+                    <ul class="exp-skill-list">
+                        <li class="exp-skill">python</li>
+                        <li class="exp-skill">selenium</li>
+                        <li class="exp-skill">powershell</li>
+                    </ul>
+                </div>
+                <p class="exp-date">July 2019 - September 2019</p>     
+            </section>
+
+            <section class="exp-work show">
+                <img class="exp-subpic" src="assets/nps.png" alt="NPS Logo" width="1200" height="826">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">Software Engineering Intern</h3>
+                    <p><i>Naval Postgraduate School</i></p>
+                    <p class="exp-date-mobile">June 2017 - July 2017</p>  
+                    <details class="exp-block-desc">
+                        <summary>Details</summary>
+                        <ul>
+                            <li>
+                                Developed software in VBA simulating Naval ship fuel usage, incorporating 
+                                variables such as locations, ship types, speeds, and minimum fuel requirements.
+                            </li>
+                        </ul>
+                    </details>
+                    <ul class="exp-skill-list">
+                        <li class="exp-skill">python</li>
+                        <li class="exp-skill">selenium</li>
+                        <li class="exp-skill">powershell</li>
+                    </ul>
+                </div>
+                <p class="exp-date">June 2017 - July 2017</p>     
+            </section>
+
+            <h2 class="exp-title">volunteering</h2>
+            <section class="exp-work show">
+                <img id="mba-pic" class="exp-subpic" src="assets/mba.png" alt="MBA Logo" width="1600" height="1554">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">Teen Conservation Leader</h3>
+                    <p><i>Monterey Bay Aquarium</i></p>
+                    <p class="exp-date-mobile">June 2016 - July 2018</p>  
+                    <details class="exp-block-desc">
+                        <summary>Details</summary>
+                        <ul>
+                            <li>
+                                300+ Hours
+                            </li>
+                            <li>
+                                Team leader for middle schoolers.
+                            </li>
+                            <li>
+                                Interacted with guests in a welcoming and informative manner.
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+                <p class="exp-date">June 2016 - July 2018</p>     
+            </section>
+
+            <section class="exp-work show">
+                <img class="exp-subpic" src="assets/chomp.jpg" alt="CHOMP Logo" width="400" height="400">
+                <div class="exp-block">
+                    <h3 class="exp-block-title">Volunteer</h3>
+                    <p><i>Community Hospital of the Monterey Peninsula</i></p>
+                    <p class="exp-date-mobile">April 2015 - April 2018</p>  
+                    <details class="exp-block-desc">
+                        <summary>Details</summary>
+                        <ul>
+                            <li>
+                                300+ Hours
+                            </li>
+                            <li>
+                                Serviced patient families at the surgery desk with a friendly attitude and utilized
+                                multiple organizational frameworks to find up to the minute information on patients
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+                <p class="exp-date">June 2016 - July 2018</p>     
+            </section>
+
+            <h2 id="resume-download">Resume Download </h2>
+            <img id="resume" src="assets/download-icon.webp" onclick="window.open('assets/RohanBhushanResume.pdf')" alt="Download Icon" width="200" height="200">
         </main>
+
+        <br />
 
         <footer>
             <hr/>
-            <p>Made by Rohan Bhushan</p>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/rohan-bhushan-a955b3194/">LinkedIn</a></li>
-                <li><a href="https://github.com/rbhushans">GitHub</a></li>
-            </ul>
+            <div class="footer-center">
+                <ul class="footer-link-list">
+                    <li class="footer-link">
+                        <a href="https://www.linkedin.com/in/rohan-bhushan-a955b3194/" target="_blank">
+                            <picture>
+                                <source media="(min-width: 900px)" srcset="assets/linkedin-logo-copy.png">
+                                <img src="assets/linkedin-logo-min.png" height="40" width="40" alt="LinkedIn Logo">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="https://github.com/rbhushans" target="_blank">
+                            <picture>
+                                <source media="(min-width: 900px)" srcset="assets/25231.png">
+                                <img src="assets/25231-min.png" height="40" width="40" alt="GitHub Logo">
+                            </picture>
+                        </a>
+                    </li>
+                    <li class="footer-link">
+                        <a href="mailto:rsbhusha@ucsd.edu" target="_blank">
+                            <picture>
+                                <source media="(min-width: 900px)" srcset="assets/Email-Icon.png">
+                                <img src="assets/Email-Icon-Min.png" height="50" width="50" alt="Email Icon">
+                            </picture>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-center" id="footer-links">
+                <ul class="footer-link-list">
+                    <li class="footer-link"><a href="index.html">home</a></li>
+                    <li class="footer-link"><a href="about.html">about</a></li>
+                    <li class="footer-link"><a href="projects.html">personal projects</a></li>
+                    <li class="footer-link"><a href="experience.html">experience</a></li>
+                </ul> 
+            </div>
+
+            <div class="footer-center">
+                <p id="footer-tag">Rohan Bhushan &copy; 2021</p>
+            </div>
         </footer>
-    
+        <script src="scripts/scroll.js"></script>
     </body>
 </html>
