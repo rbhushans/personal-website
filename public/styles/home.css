@@ -506,13 +506,17 @@ nav {
 .thumbnails img {
     display: block;
     width: 5vw;
+    height: auto;
+    max-width: 100%;
     cursor: pointer;
+    align-self: center;
 }
 .displayed-img {
     max-width: 100%;
     width: 45vw;
     height: auto;
     padding-bottom: 20px;
+    align-self: center;
 }
 @media (hover:hover) {
     .about-me-text:hover {
@@ -575,7 +579,8 @@ nav {
     font-size: 4vw;
 }
 .thumbnails img {
-    width: 10vw;
+    width: 20vw;
+    margin: 5px;
 }
 .displayed-img {
     width: 70vw;
